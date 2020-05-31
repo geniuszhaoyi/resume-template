@@ -1,0 +1,94 @@
+
+.basicResume {
+    width: calc(850px - 150px);
+    height: calc(1100px - 150px);
+    font-size: 15px;
+    font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+    text-align: left;
+    padding: 75px 75px;
+
+    .name {
+        font-size: 1.5em;
+        font-family: Arial, Helvetica, sans-serif;
+        font-variant: small-caps;
+        font-weight: bold;
+    }
+
+    .header {
+        font-family: Arial, Helvetica, sans-serif;
+        font-variant: small-caps;
+        font-weight: bold;
+    }
+
+    hr {
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+
+    .section {
+        margin: 20px 0;
+    }
+
+    .nameSection {
+        margin-top: 0;
+        text-align: center;
+    }
+
+    .contactSection {
+        display: flex;
+        justify-content: space-between;
+
+        .floatLeft {
+            display: inline-block;
+        }
+        .floatRight {
+            display: inline-block;
+            text-align: right;
+        }
+    }
+
+    .education {
+        margin: 10px 0;
+    }
+
+    .experience {
+        margin: 10px 0;
+        display: flex;
+
+        .timePeriod {
+            display: inline-block;
+            width: 140px;
+            flex: 0 0 auto;
+        }
+
+        .content {
+            display: inline-block;
+            flex: 1 1 auto;
+            text-align: justify;
+        }
+
+        .title {
+            font-weight: bold;
+        }
+
+        .description {
+            padding-inline-start: 20px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+    }
+
+    .b {
+        font-weight: bold;
+    }
+
+    ul {
+        padding-inline-start: 20px;
+        margin-block-start: 0;
+        margin-block-end: 0;
+    }
+
+    p {
+        margin: 0;
+    }
+}

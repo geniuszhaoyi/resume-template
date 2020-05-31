@@ -1,21 +1,25 @@
 {
-  "name": "resume-template",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.5.0",
-    "@testing-library/user-event": "^7.2.1",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1"
-  },
+  "name": "@geniuszhaoyi/resume-template",
+  "version": "0.2.0",
+  "description": "A fast way to generate software engineer resume using pre-defined template",
+  "author": "geniuszhaoyi",
+  "license": "MIT",
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "npm run build:commonjs & npm run build:esm & npm run copy-css:lib & npm run copy-css:esm",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "build:commonjs": "cross-env BABEL_OUTPUT=commonjs babel src/lib --out-dir lib/ --ignore **/__tests__,**/__mocks__",
+    "build:esm": "babel src/lib --out-dir esm/ --ignore **/__tests__,**/__mocks__",
+    "copy-css:esm": "cpx \"src/lib/**/*.scss\" esm",
+    "copy-css:lib": "cpx \"src/lib/**/*.scss\" lib"
   },
+  "main": "lib/index.js",
+  "module": "esm/index.js",
+  "files": [
+    "esm",
+    "lib"
+  ],
   "eslintConfig": {
     "extends": "react-app"
   },
@@ -30,5 +34,28 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "3.4.1"
+  },
+  "peerDependencies": {
+    "react": ">=16.0.0",
+    "react-dom": ">=16.0.0",
+    "node-sass": ">=4.14.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.1",
+    "@babel/core": "^7.10.2",
+    "@babel/plugin-proposal-class-properties": "^7.10.1",
+    "@babel/preset-env": "^7.10.2",
+    "@babel/preset-react": "^7.10.1",
+    "cpx": "^1.5.0",
+    "cross-env": "^7.0.2",
+    "node-sass": "^4.14.1"
   }
 }
