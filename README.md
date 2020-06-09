@@ -1,7 +1,7 @@
 # Resume Template
 
-A templates library lets you create beautiful resume without considering margin, font-family or size. 
-<!-- See this [demo](https://codesandbox.io/s/resume-template-tyvgs) and try it yourself! -->
+A templates library lets you create beautiful resume without considering margin, font-family or size.
+See this [demo](https://codesandbox.io/s/resume-template-demo-ok14f) and try it yourself!
 
 ## Install
 
